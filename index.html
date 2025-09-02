@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>SAVISKAR'25 | The Nexus of Next-Gen Tech</title>
+    <meta name="description" content="Saviskar'25 - The Nexus of Next-Gen Tech. Join us at CGC University, Mohali for an unforgettable techno-cultural fest with innovation, culture, and star performances.">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/img/logo.png" as="image">
+    <link rel="preload" href="assets/music/main.mp3" as="fetch">
+
+    <!-- CSS (optimized order) -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animation.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/css/responsive.css" media="print" onload="this.media='all'">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com&display=swap" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <!-- Music Player (initially hidden) -->
+        <audio id="bgMusic" loop>
+            <source src="assets/music/main.mp3" type="audio/mpeg">
+        </audio>
+        
+        <!-- Music Permission Modal -->
+        <div id="musicModal" class="modal">
+            <div class="modal-content">
+                <h2>Allow Background Music?</h2>
+                <p>Enhance your Saviskar experience with our soundtrack</p>
+                <div class="modal-buttons">
+                    <button id="allowMusic" class="btn-primary">Yes, Play Music</button>
+                    <button id="denyMusic" class="btn-secondary">No Thanks</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navbar" class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/img/logo.png" alt="SAVISKAR'25 Logo" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <!-- <li class="nav-item"><a href="#timeline" class="nav-link">Timeline</a></li> -->
+                    <li class="nav-item"><a href="#star-night" class="nav-link">Star Night</a></li>
+                    <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <!-- <li class="nav-item"><a href="#sponsors" class="nav-link">Sponsors</a></li> -->
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item">
+                        <button id="musicToggle" class="music-toggle">
+                            <span class="music-icon">🎧</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div id="particles-js" class="particles"></div>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="assets/img/logo.png" alt="SAVISKAR'25 Logo" class="main-logo-img">
+                    <p class="hero-tagline">CGC University, Mohali.</p>
+                </div>
+                <div class="countdown-container">
+                    <h2 class="countdown-title">Event Starts In</h2>
+                    <div id="countdown" class="countdown">
+                        <div class="countdown-item">
+                            <span id="days" class="countdown-value">50</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours" class="countdown-value">01</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes" class="countdown-value">51</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds" class="countdown-value">03</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#events" class="btn-hero">Register Now</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About SAVISKAR'25</h2>
+                <p class="section-description">The annual techno-cultural fest of our institution is back with more excitement, innovation, and cultural extravaganza!</p>
+                
+                <div class="counters">
+                    <div class="counter-item">
+                        <div class="counter-value" data-target="50">0</div>
+                        <div class="counter-label">Events</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-value" data-target="2">0</div>
+                        <div class="counter-label">Days</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-value" data-target="500">0</div>
+                        <div class="counter-label">Colleges</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-value" data-target="10000">0</div>
+                        <div class="counter-label">Participants</div>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <p>Saviskar is the annual techno-cultural fest that brings together the brightest minds from across the country. With a perfect blend of technology, culture, and innovation, we create an platform where ideas flourish and talents shine.</p>
+                    <p>This year, we're taking it to the next level with more events, bigger prizes, and unforgettable experiences that will leave you inspired and energized.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Star Night Section -->
+        <section id="star-night" class="star-night">
+            <div id="starNightVideo" class="star-night-video hidden">
+                <video autoplay loop muted playsinline>
+                    <source src="assets/video/star-night.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="container">
+                <h2 class="section-title">Star Night</h2>
+                <p class="section-description">Tap to reveal our special guest performer!</p>
+                
+                <div class="scratch-container">
+                    <div id="artistImage" class="artist-image"></div>
+                    <canvas id="scratchCanvas" width="500" height="500"></canvas>
+                    <div class="scratch-overlay">
+                        <div class="scratch-overlay-text">Tap to reveal the artist!</div>
+                    </div>
+                </div>
+                
+                <!-- Add this div for the revealed artist text -->
+                <div id="artistRevealText" class="artist-reveal-text hidden">
+                    <div class="artist-title">The Legendary</div>
+                    <div class="artist-name">Salim-Sulaiman</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section
+        <section id="timeline" class="timeline">
+            <div class="container">
+                <h2 class="section-title">Event Timeline</h2>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Day 1 - Oct 14</div>
+                        <div class="timeline-content">
+                            <h3>Inauguration & Technical Events</h3>
+                            <ul>
+                                <li>09:00 AM - Inauguration Ceremony</li>
+                                <li>10:30 AM - Coding Competition</li>
+                                <li>12:00 PM - Robo Wars</li>
+                                <li>02:00 PM - Hackathon Begins</li>
+                                <li>04:00 PM - Quiz Competition</li>
+                                <li>06:00 PM - DJ Night</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Day 2 - Oct 15</div>
+                        <div class="timeline-content">
+                            <h3>Cultural Events & Star Night</h3>
+                            <ul>
+                                <li>09:00 AM - Dance Competition</li>
+                                <li>11:00 AM - Music Events</li>
+                                <li>01:00 PM - Dramatics</li>
+                                <li>03:00 PM - Art Exhibition</li>
+                                <li>06:00 PM - Star Night Performance</li>
+                                <li>08:00 PM - Closing Ceremony</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Events Section -->
+        <section id="events" class="events">
+            <div class="container">
+                <h2 class="section-title">Events</h2>
+                
+                <div class="event-categories">
+                    <button class="category-btn active" data-category="cultural">Cultural</button>
+                    <button class="category-btn" data-category="technical">Technical</button>
+                    <button class="category-btn" data-category="non-technical">Non-Technical</button>
+                </div>
+                
+                <div class="events-container">
+                    <div class="event-cards" id="all-events">
+                        <!-- Featured events will be loaded here by JavaScript -->
+                    </div>
+                    
+                    <div class="rulebooks">
+                        <h3>Download Rulebooks</h3>
+                        <div class="rulebook-buttons">
+                            <a href="assets/pdf/cultural.pdf" class="rulebook-btn" download>Cultural Events</a>
+                            <a href="assets/pdf/technical.pdf" class="rulebook-btn" download>Technical Events</a>
+                            <a href="assets/pdf/non-technical.pdf" class="rulebook-btn" download>Non-Technical Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="assets/img/gallery/gallery1.avif" alt="Saviskar Gallery Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/gallery/gallery2.avif" alt="Saviskar Gallery Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/gallery/gallery3.avif" alt="Saviskar Gallery Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/gallery/gallery4.avif" alt="Saviskar Gallery Image 4">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/gallery/gallery5.avif" alt="Saviskar Gallery Image 5">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="lightbox" class="lightbox hidden">
+                    <span class="lightbox-close">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sponsors Section -->
+        <!-- <section id="sponsors" class="sponsors">
+            <div class="container">
+                <h2 class="section-title">Sponsors & Partners</h2>
+                
+                <div class="sponsors-container">
+                    <div class="sponsor-marquee">
+                        <div class="sponsor-track">
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor1.png" alt="Sponsor 1"></div>
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor2.png" alt="Sponsor 2"></div>
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor3.png" alt="Sponsor 3"></div>
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor4.png" alt="Sponsor 4"></div>
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor5.png" alt="Sponsor 5"></div>
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor6.png" alt="Sponsor 6"></div>
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor7.png" alt="Sponsor 7"></div>
+                            <div class="sponsor-item"><img src="assets/img/sponsors/sponsor8.png" alt="Sponsor 8"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form" action="https://script.google.com/macros/s/AKfycbwRq6dUmhnGNmTzPI_mWntMBVHZhEVbhONHa_s8sxudExOvSc7Vqq2cyKXd8ig1lWEY/exec">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="city" name="city" placeholder="Your City" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54901.32676728394!2d76.52954844863277!3d30.680907699999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe5b795735cfd%3A0xb287b4430b6720fb!2sCGC%20University%2C%20Mohali!5e0!3m2!1sen!2sin!4v1756054242635!5m2!1sen!2sin" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <h3>Email</h3>
+                                <p>info@saviskar25.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>Phone</h3>
+                                <p>+91 98765 43210</p>
+                            </div>
+                            <div class="contact-item">
+                                <h3>Address</h3>
+                                <p>CGC University, Mohali, Punjab, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/saviskar.cgcuniversity" class="social-link" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/cgcuniversitymohali/" class="social-link" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.youtube.com/@cgcjhanjeri" class="social-link" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/company/cgcuniversitymohali/" class="social-link" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://x.com/cgcuniversity" class="social-link" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <img src="assets/img/logo.png" alt="SAVISKAR'25 Logo" class="footer-logo-img">
+                        <p>The Nexus of Next-Gen Tech</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <a href="#hero">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#events">Events</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-credits">
+                        <p>© SAVISKAR'25 | The Nexus of Next-Gen Tech</p>
+                        <p>Made with <a href="https://madhavvashisht.infy.uk" target="_blank">❤️</a> at CGC University, Mohali.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Confetti Canvas -->
+        <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
+
+        <!-- External JavaScript Files -->
+        <script src="assets/js/counter.js" defer></script>
+        <script src="assets/js/main.js" defer></script>
+        <script src="assets/js/scratch.js" defer></script>
+        <script src="assets/js/carousel.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+        <script src="assets/js/form.js" defer></script>
+    </body>
+</html>
